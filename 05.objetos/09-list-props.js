@@ -1,0 +1,28 @@
+const punto = {
+    x: 10,
+    y: 15,
+    dibujar () {
+        console.log('dibujando...');
+    }
+};
+
+// delete punto.dibujar;
+if ('dibujar' in punto){
+    punto.dibujar();
+}
+
+// console.log(Object.keys(punto));
+//Esta forma es mas antigua
+for (let llave of Object.keys(punto)){
+    console.log(llave, punto[llave]);
+}
+
+for  (let entry of Object.entries(punto)){
+    console.log(entry);
+}
+
+//Esta es mas reciente
+for (let llave in punto){
+    console.log(llave, punto[llave]);
+}
+     
